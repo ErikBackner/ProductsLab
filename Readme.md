@@ -6,7 +6,7 @@ API:t och SQL Server körs i varsin container och kommunicerar via ett isolerat 
 
 ## Endpoints
 - **GET /products** - listar produkter (seed: Coca-cola, Fanta, Pepsi)
-- **POST /products** - skapar produkt, t.ex.:
+- **POST /products** - skapar produkt, t.ex:
   ```json
   { "name": "Sprite", "price": 12 }
 Testguide
@@ -25,6 +25,6 @@ Testa GET /products och POST /products.
 
 Stoppa / nollställa
 
-docker compose down              # stoppa
+docker compose down             
 
-docker compose down --volumes    # stoppa + rensa DB
+docker compose down --volumes  

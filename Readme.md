@@ -9,14 +9,13 @@ API och DB körs i separata containrar.
   '''json
   { "name": "Sprite", "price": 12 }
 
-GÖr såhär:
+Gör sÅhär:
 Installera Docker Desktop.
 
 Klona repot.
 
 I repo-roten kör:
 
-bash
 Kopiera kod
 docker compose up --build -d
 Öppna Swagger: http://localhost:8080/swagger/index.html

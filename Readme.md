@@ -18,7 +18,6 @@ Ha Docker Desktop nedladdat.
 
 Kopiera kod
 docker compose up --build -d
-alt (Compose v1): docker-compose up --build -d
 Vänta tills två containrar är igång (productsapp + sqlserver) i Docker Desktop.
 
 Öppna Swagger: http://localhost:8080/swagger/index.html

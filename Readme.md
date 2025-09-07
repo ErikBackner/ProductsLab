@@ -1,17 +1,20 @@
- ProductsLab
+# ProductsLab
 
-ASP.NET Core Web API (.NET 8) + EF Core + SQL Server i Docker Compose. API och DB körs i separata containrar.
+ASP.NET Core Web API (.NET 8) + EF Core + SQL Server i Docker Compose.  
+API och DB körs i separata containrar.
 
-Endpoints
-- GET /products - listar produkter (seed: Coca-cola, Fanta, Pepsi)
-- POST /products - skapar produkt, ex:
+## Endpoints
+- **GET** '/products' - listar produkter (seed: Coca-cola, Fanta, Pepsi)
+- **POST** '/products' - skapar produkt
+  '''json
   { "name": "Sprite", "price": 12 }
-Så kör du
-Installera Docker Desktop
 
-Klona repo
+GÖr såhär:
+Installera Docker Desktop.
 
-I repo-roten:
+Klona repot.
+
+I repo-roten kör:
 
 bash
 Kopiera kod
@@ -21,5 +24,5 @@ docker compose up --build -d
 Stoppa / nollställ
 bash
 Kopiera kod
-docker compose down             stoppa
-docker compose down --volumes   stoppa + rensa D
+docker compose down              # stoppa
+docker compose down --volumes    # stoppa + rensa DB

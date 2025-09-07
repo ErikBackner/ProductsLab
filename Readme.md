@@ -1,26 +1,31 @@
 # ProductsLab
 
-ASP.NET Core Web API (.NET 8) + EF Core + SQL Server i Docker Compose.  
-API och DB körs i separata containrar.
+Ett enkelt ASP .NET Core Web API med NuGet-paket:  
+Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.Tools, Microsoft.EntityFrameworkCore.Design, Microsoft.EntityFrameworkCore.SqlServer.  
+API:t och SQL Server körs i varsin container och kommunicerar via ett isolerat nätverk i Docker Compose.
 
 ## Endpoints
-- **GET** '/products' - listar produkter (seed: Coca-cola, Fanta, Pepsi)
-- **POST** '/products' - skapar produkt
-  '''json
+- **GET /products** - listar produkter (seed: Coca-cola, Fanta, Pepsi)
+- **POST /products** - skapar produkt, t.ex.:
+  ```json
   { "name": "Sprite", "price": 12 }
+Testguide
+Clona GIT-repo.
 
-Gör sÅhär:
-Installera Docker Desktop.
+Ha Docker Desktop nedladdat.
 
-Klona repot.
-
-I repo-roten kör:
+Öppna PowerShell i repo-roten (eller från Visual Studio) och kör:
 
 Kopiera kod
 docker compose up --build -d
+# alt (Compose v1): docker-compose up --build -d
+Vänta tills två containrar är igång (productsapp + sqlserver) i Docker Desktop.
+
 Öppna Swagger: http://localhost:8080/swagger/index.html
 
-Stoppa / nollställ
+Testa GET /products och POST /products.
+
+Stoppa / nollställa
 
 Kopiera kod
 docker compose down              # stoppa

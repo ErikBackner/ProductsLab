@@ -21,7 +21,7 @@ docker compose up --build -d
 Öppna Swagger: http://localhost:8080/swagger/index.html
 
 Stoppa / nollställ
-bash
+
 Kopiera kod
 docker compose down              # stoppa
 docker compose down --volumes    # stoppa + rensa DB

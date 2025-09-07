@@ -55,4 +55,12 @@ using (var scope = app.Services.CreateScope())
 
 app.MapGet("/products", async (ProductContext db) => await db.Products.ToListAsync());
 
+app.MapPost("/products", async (ProductContext db, Product input) =>
+{
+    db.Products.Add(input);
+    await db.SaveChangesAsync();
+    return Results.Created($"/products/{input.Id}", input);
+});
+
+
 app.Run();

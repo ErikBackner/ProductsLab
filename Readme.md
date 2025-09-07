@@ -16,7 +16,6 @@ Ha Docker Desktop nedladdat.
 
 Öppna PowerShell i repo-roten (eller från Visual Studio) och kör:
 
-Kopiera kod
 docker compose up --build -d
 Vänta tills två containrar är igång (productsapp + sqlserver) i Docker Desktop.
 

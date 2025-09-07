@@ -26,4 +26,5 @@ Testa GET /products och POST /products.
 Stoppa / nollställa
 
 docker compose down              # stoppa
+
 docker compose down --volumes    # stoppa + rensa DB
